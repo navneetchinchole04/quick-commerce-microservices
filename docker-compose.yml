@@ -1,0 +1,29 @@
+services:
+
+  user-service:
+    build: ./user-service
+    ports:
+      - "8002:8002"
+    environment:
+      - MONGO_URL=your_mongo_url_here
+
+  product-service:
+    build: ./product-service
+    ports:
+      - "8001:8001"
+    environment:
+      - MONGO_URL=your_mongo_url_here
+
+  cart-service:
+    build: ./cart-service
+    ports:
+      - "8003:8003"
+    environment:
+      - MONGO_URL=your_mongo_url_here
+
+  delivery-service:
+    build: ./delivery-service
+    ports:
+      - "8004:8004"
+    environment:
+      - MONGO_URL=your_mongo_url_here
